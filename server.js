@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const api = require("./routes/index.js");
 const fs = require("fs");
+const { v4: uuidv4 } = (require = "uuid");
 
 const PORT = process.env.PORT || 3001;
 
@@ -59,7 +60,7 @@ app.post("/api/notes", (req, res) => {
     const newNote = {
       title,
       text,
-      id: unid(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json");
