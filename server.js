@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const api = require("./routes/index.js");
 const fs = require("fs");
-const { v4: uuidv4 } = (require = "uuid");
+const { v4: uuidv4 } = require("uuid");
 
 const PORT = process.env.PORT || 3001;
 
